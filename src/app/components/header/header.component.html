@@ -1,4 +1,16 @@
-<nav class="navbar navbar-light bg-light">
+<div>
+    <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h1">MindSait</span>
-    <span class="navbar-brand mb-0 h1">{{ nome }}</span>
-</nav>
+    <div class="navbar">
+        <span class="nav-item mx-3">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </span>
+        <span class="nav-item mx-3">
+            <a class="nav-link" routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Produtos</a>
+        </span>
+        <span class="nav-item mx-3">
+            <a class="nav-link" routerLink="/products/signUp" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Cadastrar Produto</a>
+        </span>
+    </div>
+  </nav>
+</div>

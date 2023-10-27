@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProduct } from 'src/app/interfaces/product';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
-  products = [];
+  protected products: IProduct[] = [];
   constructor(private productsService: ProductsService) {
 
   }
