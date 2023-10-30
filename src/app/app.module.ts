@@ -7,18 +7,23 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductsTableComponent } from './components/products-table/products-table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterProductComponent } from './pages/register-product/register-product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ProductsComponent,
-    ProductsTableComponent
+    ProductsTableComponent,
+    RegisterProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,4 +13,8 @@ export class ProductsService {
   getAll() {
     return this.http.get<IProduct[]>(this.api);
   }
+
+  registerProduct(product: IProduct) {
+    return this.http.post<IProduct>(this.api + '/register', product)
+  }
 }
