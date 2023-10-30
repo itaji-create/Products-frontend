@@ -1,5 +1,5 @@
-<div class="container mt-5">
-    <h2>Cadastro de Produto</h2>
+<div class="container mt-5 border border-secondary border-2 shadow-lg p-3 col-6">
+    <h2 class="">Cadastro de Produto</h2>
     <form [formGroup]="productForm" (submit)="registerProduct()">
         <div class="form-group">
             <label for="name">Nome:</label>
@@ -11,9 +11,14 @@
         </div>
         <div class="form-group">
             <label for="preco">Preço:</label>
-            <input formControlName="preco" type="number" step="0.01" class="form-control" id="preco" placeholder="Digite o preço" required>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">R$</span>
+                </div>
+                <input formControlName="preco" type="number" class="form-control" id="preco" placeholder="Digite o preço" required>
+            </div>
         </div>
-        <button type="button" routerLink="/products" class="btn btn-primary">Voltar</button>
+        <button type="button" routerLink="/products" class="btn btn-secondary mx-2">Voltar</button>
         <button type="submit" class="btn btn-primary my-2">Cadastrar</button>
     </form>
 </div>

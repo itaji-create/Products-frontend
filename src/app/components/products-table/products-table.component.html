@@ -1,12 +1,11 @@
-<table class="table table-bordered table-striped">
+<table class="table table-secondary shadow-lg">
     <thead>
       <tr>
-        <th scope="col">id</th>
+        <th scope="col">ID</th>
         <th scope="col">Nome</th>
         <th scope="col">Código de Barras</th>
         <th scope="col">Preço</th>
-        <td scope="col">Ações</td>
-
+        <th scope="col">Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -14,7 +13,7 @@
         <th scope="row">{{ product.id }}</th>
         <td>{{ product.nome }}</td>
         <td>{{ product.codigoBarras }}</td>
-        <td>{{ product.preco }}</td>
+        <td>{{ product.preco | currency: 'BRL' }}</td>
         <td>
           <button class="btn">Editar</button>
           <button class="btn" (click)="deleteProduct(product.id)">Excluir</button>

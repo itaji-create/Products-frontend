@@ -5,6 +5,9 @@ import { RegisterProductComponent } from './pages/register-product/register-prod
 
 const routes: Routes = [
   {
+    path: '', component: ProductsComponent
+  },
+  {
     path: 'products', component: ProductsComponent
   },
   {
