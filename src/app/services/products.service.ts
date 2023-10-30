@@ -17,4 +17,8 @@ export class ProductsService {
   registerProduct(product: IProduct) {
     return this.http.post<IProduct>(this.api + '/register', product)
   }
+
+  deleteProduct(id: number) {
+    return this.http.delete<IProduct>(this.api + '/' + id)
+  }
 }

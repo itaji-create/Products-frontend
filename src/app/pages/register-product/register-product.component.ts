@@ -20,7 +20,6 @@ export class RegisterProductComponent {
 
   registerProduct() {
     const product: IProduct = this.productForm.value as IProduct;
-    console.log(product);
     this.productsService.registerProduct(product).subscribe((result) => {
       Swal.fire(
         'Parabens',

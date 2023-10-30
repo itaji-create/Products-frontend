@@ -5,6 +5,8 @@
         <th scope="col">Nome</th>
         <th scope="col">Código de Barras</th>
         <th scope="col">Preço</th>
+        <td scope="col">Ações</td>
+
       </tr>
     </thead>
     <tbody>
@@ -13,6 +15,10 @@
         <td>{{ product.nome }}</td>
         <td>{{ product.codigoBarras }}</td>
         <td>{{ product.preco }}</td>
+        <td>
+          <button class="btn">Editar</button>
+          <button class="btn" (click)="deleteProduct(product.id)">Excluir</button>
+        </td>
       </tr>
     </tbody>
 </table>
