@@ -21,4 +21,12 @@ export class ProductsService {
   deleteProduct(id: number) {
     return this.http.delete<IProduct>(this.api + '/' + id)
   }
+
+  getProductById(id: number) {
+    return this.http.get<IProduct>(this.api + '/' + id);
+  }
+
+  updateProduct(id: string | null, product: IProduct) {
+    return this.http.put<IProduct>(this.api + '/' + id, product);
+  }
 }

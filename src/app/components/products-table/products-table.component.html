@@ -15,8 +15,8 @@
         <td>{{ product.codigoBarras }}</td>
         <td>{{ product.preco | currency: 'BRL' }}</td>
         <td>
-          <button class="btn">Editar</button>
-          <button class="btn" (click)="deleteProduct(product.id)">Excluir</button>
+          <button class="btn btn-warning mx-2" [routerLink]="['/products/edit', product.id]">Editar</button>
+          <button class="btn btn-danger" (click)="deleteProduct(product.id)">Excluir</button>
         </td>
       </tr>
     </tbody>

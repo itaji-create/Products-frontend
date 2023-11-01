@@ -25,13 +25,15 @@ export class ProductsTableComponent {
       confirmButtonText: 'Deletar!'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.productsService.deleteProduct(id).subscribe(result => {      
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )})
+        this.productsService.deleteProduct(id).subscribe(() => {
+          Swal.fire(
+            'Deleted!',
+            'Seu produto foi apagado do banco de dados!',
+            'success'
+          );
+          this.data = this.data.filter(prod => prod.id !== id);
+        });
       }
-    })
+    });
   }
 }

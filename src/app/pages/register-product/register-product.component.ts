@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { catchError, throwError } from 'rxjs';
 import { IProduct } from 'src/app/interfaces/product';
 import { ProductsService } from 'src/app/services/products.service';
 import Swal from 'sweetalert2';
@@ -20,12 +21,23 @@ export class RegisterProductComponent {
 
   registerProduct() {
     const product: IProduct = this.productForm.value as IProduct;
-    this.productsService.registerProduct(product).subscribe((result) => {
-      Swal.fire(
-        'Parabens',
-        'usuatio cadastrado',
-        'success'
+    this.productsService.registerProduct(product)
+      .pipe(
+        catchError(error => {
+          Swal.fire(
+            error.error.error,
+            error.error.message,
+            'error'
+          );
+          return throwError('Erro ao cadastrar o produto.');
+        })
       )
-    })
+      .subscribe((result) => {
+        Swal.fire(
+          'Parabéns',
+          'Produto cadastrado!',
+          'success'
+        );
+    });
   }
 }
