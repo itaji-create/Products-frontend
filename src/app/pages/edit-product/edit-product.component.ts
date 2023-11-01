@@ -13,19 +13,15 @@ import Swal from 'sweetalert2';
   styleUrls: ['./edit-product.component.css']
 })
 export class EditProductComponent implements OnInit{
-  product: IProduct = {
-    nome: "string",
-    codigoBarras: "string",
-    preco: 0,
-    id: 0
-  };
-  productForm = new FormGroup({
+  constructor(private route: ActivatedRoute, private productsService: ProductsService) {}
+  
+  protected productForm: FormGroup = new FormGroup({
     nome: new FormControl(''),
     codigoBarras: new FormControl(''),
     preco: new FormControl(0)
   })
-
-  constructor(private route: ActivatedRoute, private productsService: ProductsService) {}
+  
+  protected product: IProduct = this.productForm.value as IProduct;
   
   ngOnInit(): void {
     this.route.params.subscribe(params => {
