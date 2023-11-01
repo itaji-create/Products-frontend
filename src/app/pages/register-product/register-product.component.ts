@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
 export class RegisterProductComponent {
   constructor(private productsService: ProductsService) {}
 
-  productForm = new FormGroup({
+  protected productForm: FormGroup = new FormGroup({
     nome: new FormControl(''),
     codigoBarras: new FormControl(''),
     preco: new FormControl(0)

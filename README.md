@@ -1,27 +1,26 @@
-# ProductsFrontend
+# Bem vindo ao projeto ProductsFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
+Esse projeto tem como finalidade demonstrar os conhecimentos obtidos em desenvolvimento de aplicativos web durante o curso de capacitação em Angular da Minsait. Nele foi construído um aplicativo frontend usando o framework Angular que exibe uma tabela de produtos em que é possível editar, deletar ou cadastrar novo produto.
 
-## Development server
+## Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de começar, certifique-se de ter o [Angular CLI](https://github.com/angular/angular-cli) versão 16.2.7. instalado. Caso não tenha, você pode instalá-lo com o seguinte comando:
 
-## Code scaffolding
+    `npm install -g @angular/cli`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    *Obs. Caso o comando npm não funcione será necessario instalar o node em sua máquina.
 
-## Build
+## Instalação
+    1. Clone o repositório:
+        - `git clone https://github.com/itaji-create/Products-frontend`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    2. Acesse o diretório do projeto:
+        - `cd Products-frontend`
+    
+    3. Instale as dependências:
+        - `npm install`
 
-## Running unit tests
+## Executando o Projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `ng serve` para um servidor de desenvolvimento. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar algum dos arquivos de origem.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
