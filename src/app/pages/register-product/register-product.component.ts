@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { catchError, throwError } from 'rxjs';
 import { IProduct } from 'src/app/interfaces/product';
 import { ProductsService } from 'src/app/services/products.service';
@@ -14,8 +14,8 @@ export class RegisterProductComponent {
   constructor(private productsService: ProductsService) {}
 
   protected productForm: FormGroup = new FormGroup({
-    nome: new FormControl(''),
-    codigoBarras: new FormControl(''),
+    nome: new FormControl('', Validators.pattern(/^[A-Za-z ]*$/)),
+    codigoBarras: new FormControl('', Validators.maxLength(50)),
     preco: new FormControl(0)
   })
 

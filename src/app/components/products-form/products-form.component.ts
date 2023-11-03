@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-products-form',
@@ -12,7 +12,11 @@ export class ProductsFormComponent {
   @Input() btnName: string;
 
   constructor() {
-    this.productForm = new FormGroup({});
+    this.productForm = new FormGroup({
+      nome: new FormControl('', Validators.required),
+      codigoBarras: new FormControl('', Validators.required),
+      preco: new FormControl(0, Validators.required)
+    });
     this.productFunc = () => {};
     this.btnName = '';
   }

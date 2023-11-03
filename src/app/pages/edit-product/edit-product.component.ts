@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { throwError } from 'rxjs/internal/observable/throwError';
 import { catchError } from 'rxjs/operators';
@@ -29,8 +29,8 @@ export class EditProductComponent implements OnInit{
       this.id = productId;
       this.productsService.getProductById(productId).subscribe((result) => {
         this.productForm =  new FormGroup({
-          nome: new FormControl(result.nome),
-          codigoBarras: new FormControl(result.codigoBarras),
+          nome: new FormControl(result.nome, Validators.pattern(/^[A-Za-z ]*$/)),
+          codigoBarras: new FormControl(result.codigoBarras, Validators.maxLength(50)),
           preco: new FormControl(result.preco)
         })
       })      

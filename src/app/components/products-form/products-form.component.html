@@ -2,10 +2,14 @@
     <div class="form-group">
         <label for="name">Nome:</label>
         <input formControlName="nome" type="text" class="form-control" id="name" placeholder="Digite o nome do produto" required>
+        <i *ngIf="productForm?.get('nome')?.hasError('required')" class="text-danger">Nome é obrigatório.</i>
+        <i *ngIf="productForm?.get('nome')?.hasError('pattern')" class="text-danger">Nome não é válido.</i>
     </div>
     <div class="form-group my-2">
         <label for="codigoBarras">Código de Barras:</label>
         <input formControlName="codigoBarras" type="text" class="form-control" id="codigoBarras" placeholder="Digite o código de barras" required>
+        <i *ngIf="productForm?.get('codigoBarras')?.hasError('required')" class="text-danger">Código de Barras é obrigatório.</i>
+        <i *ngIf="productForm?.get('codigoBarras')?.hasError('maxlength')" class="text-danger">Código de Barras deve ter no máximo 50 caracteres.</i>
     </div>
     <div class="form-group">
         <label for="preco">Preço:</label>
@@ -14,8 +18,9 @@
                 <span class="input-group-text">R$</span>
             </div>
             <input formControlName="preco" type="number" class="form-control" id="preco" placeholder="Digite o preço" required>
+            <i *ngIf="productForm?.get('preco')?.hasError('required')" class="text-danger">Preço é obrigatório.</i>
         </div>
     </div>
     <button type="button" routerLink="/products" class="btn btn-secondary mx-2">Voltar</button>
-    <button type="submit" class="btn btn-primary my-2">{{ btnName }}</button>
+    <button type="submit" class="btn btn-primary my-2" [disabled]="productForm.invalid">{{ btnName }}</button>
 </form>
