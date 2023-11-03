@@ -6,19 +6,19 @@ Esse projeto tem como finalidade demonstrar os conhecimentos obtidos em desenvol
 
 Antes de começar, certifique-se de ter o [Angular CLI](https://github.com/angular/angular-cli) versão 16.2.7. instalado. Caso não tenha, você pode instalá-lo com o seguinte comando:
 
-    `npm install -g @angular/cli`
+    npm install -g @angular/cli
 
-    *Obs. Caso o comando npm não funcione será necessario instalar o node em sua máquina.
+  *Obs. Caso o comando npm não funcione será necessario instalar o node em sua máquina.
 
 ## Instalação
-    1. Clone o repositório:
-        - `git clone https://github.com/itaji-create/Products-frontend`
+  1. Clone o repositório:
+       `git clone https://github.com/itaji-create/Products-frontend`
 
-    2. Acesse o diretório do projeto:
-        - `cd Products-frontend`
+  2. Acesse o diretório do projeto:
+       `cd Products-frontend`
     
-    3. Instale as dependências:
-        - `npm install`
+  3. Instale as dependências:
+       `npm install`
 
 ## Executando o Projeto
 
