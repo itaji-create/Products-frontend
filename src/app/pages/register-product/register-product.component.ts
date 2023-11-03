@@ -19,7 +19,7 @@ export class RegisterProductComponent {
     preco: new FormControl(0)
   })
 
-  registerProduct() {
+  registerProduct = () => {
     const product: IProduct = this.productForm.value as IProduct;
     this.productsService.registerProduct(product)
       .pipe(

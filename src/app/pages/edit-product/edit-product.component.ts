@@ -20,21 +20,26 @@ export class EditProductComponent implements OnInit{
     codigoBarras: new FormControl(''),
     preco: new FormControl(0)
   })
+  protected id: number = 0
   
-  protected product: IProduct = this.productForm.value as IProduct;
   
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const productId = params['id'];
+      this.id = productId;
       this.productsService.getProductById(productId).subscribe((result) => {
-        this.product = result;
+        this.productForm =  new FormGroup({
+          nome: new FormControl(result.nome),
+          codigoBarras: new FormControl(result.codigoBarras),
+          preco: new FormControl(result.preco)
+        })
       })      
     });
   }
 
-  updateProduct() {
-    const id = this.route.snapshot.paramMap.get('id');
+  updateProduct = () => {
     const product: IProduct = this.productForm.value as IProduct;
+    const id: number = this.id;
     this.productsService.updateProduct(id, product)
       .pipe(
         catchError(error => {

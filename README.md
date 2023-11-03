@@ -1,6 +1,6 @@
 # Bem vindo ao projeto ProductsFrontend
 
-Esse projeto tem como finalidade demonstrar os conhecimentos obtidos em desenvolvimento de aplicativos web durante o curso de capacitação em Angular da Minsait. Nele foi construído um aplicativo frontend usando o framework Angular que exibe uma tabela de produtos em que é possível editar, deletar ou cadastrar novo produto.
+Esse projeto tem como finalidade demonstrar os conhecimentos obtidos em desenvolvimento de aplicativos web durante o curso de capacitação em Angular da Minsait. Nele foi construído um aplicativo frontend usando o framework Angular que possui uma página para listar produtos em uma tabela, uma para editar o produto e outra para cadastrar novo produto, também é possível excluir um produto e em cada requisição para alterar o database é exibido uma mensagem de alerta da API sweetalert2.
 
 ## Pré-requisitos
 

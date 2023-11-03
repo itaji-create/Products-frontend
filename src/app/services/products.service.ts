@@ -26,7 +26,7 @@ export class ProductsService {
     return this.http.get<IProduct>(this.api + '/' + id);
   }
 
-  updateProduct(id: string | null, product: IProduct) {
+  updateProduct(id: number, product: IProduct) {
     return this.http.put<IProduct>(this.api + '/' + id, product);
   }
 }

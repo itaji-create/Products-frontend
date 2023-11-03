@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterProductComponent } from './pages/register-product/register-product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditProductComponent } from './pages/edit-product/edit-product.component';
+import { ProductsFormComponent } from './components/products-form/products-form.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { EditProductComponent } from './pages/edit-product/edit-product.componen
     ProductsComponent,
     ProductsTableComponent,
     RegisterProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    ProductsFormComponent
   ],
   imports: [
     BrowserModule,
