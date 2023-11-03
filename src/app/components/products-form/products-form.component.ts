@@ -9,11 +9,12 @@ import { FormGroup } from '@angular/forms';
 export class ProductsFormComponent {
   @Input() productForm: FormGroup;
   @Input() productFunc: Function;
+  @Input() btnName: string;
 
   constructor() {
-
     this.productForm = new FormGroup({});
     this.productFunc = () => {};
+    this.btnName = '';
   }
 
 }
